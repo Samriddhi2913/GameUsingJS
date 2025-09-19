@@ -34,3 +34,14 @@ img{
     margin-top:5rem;
 
 }
+.score-board{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    margin-top:3rem;
+    gap: 5rem;
+}
+#user-score, #comp-score{
+    font-size:4rem;
+}
