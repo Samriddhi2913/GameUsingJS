@@ -10,11 +10,44 @@ const genCompChoice = ()=>{
     return options[randIdx];
 }
 
+const drawGame = ()=>{
+    console.log("Game Drawn");
+}
+
+const showWinner = (userWin)=>{
+    if(userWin){
+        console.log("You Win!");
+    }
+    else{
+        console.log("You Lose!");
+    }
+}
+
 const playGame=(userChoice)=>{
     console.log("user choice is: ", userChoice);
     // Generate Computer Choice
     const compChoice = genCompChoice();
     console.log("Computer choice is: ",compChoice);
+
+    //Draw Game
+    if(userChoice === compChoice){
+        drawGame();
+    } else{
+        let userWin = true;
+        if(userChoice === "rock"){
+            //scissors, paper
+            userWin = compChoice === "paper" ? false : true;
+        }
+        else if(userChoice === "paper"){
+            //rock, scissors
+            userWin = compChoice === "scissors" ? false : true;
+        }
+        else{
+            //rock paper
+            userWin =compChoice === "rock" ? false : true;
+        }
+        showWinner(userWin);
+    }
 }
 
 choices.forEach((choice)=>{
