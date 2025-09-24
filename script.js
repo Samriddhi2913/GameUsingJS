@@ -37,10 +37,10 @@ const showWinner = (userWin, userChoice, compChoice)=>{
 }
 
 const playGame=(userChoice)=>{
-    console.log("user choice is: ", userChoice);
+    // console.log("user choice is: ", userChoice);
     // Generate Computer Choice
     const compChoice = genCompChoice();
-    console.log("Computer choice is: ",compChoice);
+    // console.log("Computer choice is: ",compChoice);
 
     //Draw Game
     if(userChoice === compChoice){
