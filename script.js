@@ -3,6 +3,8 @@ let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
+const userScorePara = document.querySelector("#user-score");
+const compScorePara = document.querySelector("#comp-score");
 
 const genCompChoice = ()=>{
     //rock, paper, scissors
@@ -19,6 +21,7 @@ const drawGame = ()=>{
 
 const showWinner = (userWin, userChoice, compChoice)=>{
     if(userWin){
+        userScore++;
         console.log("You Win!");
         msg.innerText = `You Win! Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "green";
